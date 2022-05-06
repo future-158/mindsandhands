@@ -1,12 +1,17 @@
-# mindsandhands
+# assumption
+you can groupby train_set by some manner( *may need domain knowledge. not sure*)
+make different model in each group would make better result overall
+
 
 # steps
 - use umap embedding
-- automatic trainset labeling using dbscan
-- automatic testset labeling uinsg knn
-- foreach group: fit X_train_g, y_train_g and predict X_test_g, y_test_g
+- labeling train data using dbscan
+- labeling test data using knn
+- foreach group:
+  - fit X_train_in_group, y_train_in_group
+  - predict X_test_in_group
 
-# improve
-- test whether using scaler improve score
-- model hyper parameter optimization
--   
+# needed experiments
+- standard scaler
+- one-hot-encoding X_3
+- hyper parameter optimization
