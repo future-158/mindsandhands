@@ -2,7 +2,6 @@
 you can groupby train_set by some manner( *may need domain knowledge. not sure*)
 make different model in each group would make better result overall
 
-
 # steps
 - use umap embedding
 - labeling train data using dbscan
@@ -12,6 +11,6 @@ make different model in each group would make better result overall
   - predict X_test_in_group
 
 # needed experiments
-- standard scaler
-- one-hot-encoding X_3
+- every feature's cardinality is too small. test ordinal encoding or one-hot-encoding, etc.
 - hyper parameter optimization
+- by plotting graph, target distribution shift seems not occured. need to check covarite shift. need to find train, test data comes from same distribution.
